@@ -33,7 +33,7 @@ export function HeroSection() {
     >
       <motion.div
         className="absolute inset-0 scale-110"
-        style={{ 
+        style={{
           backgroundImage: "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=80')",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -82,7 +82,7 @@ export function HeroSection() {
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-            >
+          >
               Makina
             </motion.span>
           </motion.h1>
@@ -110,7 +110,7 @@ export function HeroSection() {
               className="group relative overflow-hidden border border-white bg-white px-8 py-4 text-sm font-bold uppercase tracking-widest text-black transition-all hover:bg-transparent hover:text-white"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-            >
+          >
               <span className="relative z-10">Каталог</span>
               <motion.div
                 className="absolute inset-0 bg-black"

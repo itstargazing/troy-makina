@@ -81,8 +81,9 @@ export default function ContactPage() {
                     <PhoneCall className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-[#555]">Телефон</p>
+                    <p className="text-xs font-bold uppercase tracking-widest text-[#555]">Телефоны</p>
                     <p className="mt-1 text-white">{contactConfig.phoneDisplay}</p>
+                    <p className="text-white">{contactConfig.phoneDisplay2}</p>
                   </div>
                 </div>
 

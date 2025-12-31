@@ -33,13 +33,13 @@ export function ProductCard({ product, index = 0 }: Props) {
     >
       {/* Image - Fixed aspect ratio */}
       <div className="relative aspect-[16/10] w-full overflow-hidden">
-        <Image
-          src={product.images[0]}
-          alt={product.name}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          <Image
+            src={product.images[0]}
+            alt={product.name}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover grayscale transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0"
-        />
+          />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
         
         {/* Badges */}
@@ -140,10 +140,10 @@ export function ProductCard({ product, index = 0 }: Props) {
                   <div key={i} className="flex items-start gap-2 text-xs text-[#999]">
                     <span className="mt-1.5 h-1 w-1 shrink-0 bg-white" />
                     <span className="leading-relaxed">{line}</span>
-                  </div>
-                ))}
-              </div>
             </div>
+          ))}
+              </div>
+        </div>
           </motion.div>
         )}
       </AnimatePresence>

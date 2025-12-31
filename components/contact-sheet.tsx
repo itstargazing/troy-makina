@@ -65,18 +65,22 @@ export default function ContactSheet() {
               Ответ в рабочее время в течение 1 часа
             </p>
 
-            <div className="mt-8 space-y-6">
+              <div className="mt-8 space-y-6">
               <div className="border border-[#222] bg-[#111] p-4">
                 <p className="text-xs font-bold uppercase tracking-widest text-[#555]">Контакт</p>
                 <p className="mt-2 text-lg font-bold text-white">{contactConfig.salesName}</p>
                 <p className="text-sm text-[#888]">{contactConfig.salesRole}</p>
+                <div className="mt-3 space-y-1">
+                  <p className="text-sm text-white">{contactConfig.phoneDisplay}</p>
+                  <p className="text-sm text-white">{contactConfig.phoneDisplay2}</p>
+                </div>
                 <div className="mt-4 flex gap-2">
                   <button
-                    onClick={() => copyValue(contactConfig.phoneDisplay, "phone")}
+                    onClick={() => copyValue(contactConfig.phone1, "phone")}
                     className="flex items-center gap-2 border border-[#333] px-3 py-2 text-xs text-white transition-colors hover:bg-[#222]"
                   >
                     {copiedField === "phone" ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
-                    Телефон
+                    Копировать тел.
                   </button>
                   <button
                     onClick={() => copyValue(contactConfig.email, "email")}
@@ -117,20 +121,27 @@ export default function ContactSheet() {
                 </a>
                 <div className="grid grid-cols-2 gap-3">
                   <a
-                    href={`tel:${contactConfig.whatsappNumber}`}
+                    href={`tel:${contactConfig.phone1}`}
                     className="flex items-center justify-center gap-2 border border-[#333] py-3 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-[#222]"
                   >
                     <PhoneCall className="h-4 w-4" />
-                    Позвонить
+                    Тел. 1
                   </a>
                   <a
-                    href={mailtoLink}
+                    href={`tel:${contactConfig.phone2}`}
                     className="flex items-center justify-center gap-2 border border-[#333] py-3 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-[#222]"
                   >
-                    <Mail className="h-4 w-4" />
-                    Email
+                    <PhoneCall className="h-4 w-4" />
+                    Тел. 2
                   </a>
                 </div>
+                <a
+                  href={mailtoLink}
+                  className="flex items-center justify-center gap-2 border border-[#333] py-3 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-[#222]"
+                >
+                  <Mail className="h-4 w-4" />
+                  Email
+                </a>
               </div>
             </div>
           </motion.div>
